@@ -126,8 +126,8 @@ You may find additional pattern examples in two directories:
 # Tutorials & further examples
 On malware samples:
 
-- Navigating malware samples with grap (CLI, IDA): https://quosecgmbh.github.io/blog/grap_qakbot_navigation
-- Automating function parsing and decryption (python bindings): https://quosecgmbh.github.io/blog/grap_qakbot_strings
+- Navigating malware samples with grap (CLI, IDA): https://yaps8.github.io/blog/grap_qakbot_navigation
+- Automating function parsing and decryption (python bindings): https://yaps8.github.io/blog/grap_qakbot_strings
 
 Python bindings usage:
 
