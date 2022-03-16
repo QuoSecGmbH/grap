@@ -11,16 +11,16 @@ Support:
 * Architecture: x86 and x86_64
 
 ### Match quick pattern:
-![Match quick pattern](https://github.com/yaps8/yaps8.github.io/raw/master/grap/figures/backspace_quick_pattern.png)
+![Match quick pattern](https://yaps8.github.io/grap/figures/backspace_quick_pattern.png)
 
 ### Match full pattern:
-![Match full pattern](https://github.com/yaps8/yaps8.github.io/raw/master/grap/figures/backspace_full_pattern.png)
+![Match full pattern](https://yaps8.github.io/grap/figures/backspace_full_pattern.png)
 
 ### Match on multiple files:
-![Match on multiple files](https://github.com/yaps8/yaps8.github.io/raw/master/grap/figures/backspace_quiet.png)
+![Match on multiple files](https://yaps8.github.io/grap/figures/backspace_quiet.png)
 
 ### Create patterns interactively from IDA:
-![Create and match patterns directly from IDA](https://github.com/yaps8/yaps8.github.io/raw/master/grap/figures/ida_create_pattern_v1_2_1.png)
+![Create and match patterns directly from IDA](https://yaps8.github.io/grap/figures/ida_create_pattern_v1_2_1.png)
 
 # Installation
 This document describes how to build and install grap on a Linux distribution.
