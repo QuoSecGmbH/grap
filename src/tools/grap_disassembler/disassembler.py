@@ -95,7 +95,7 @@ class GenericDisassembler:
         self.max_instruction_size = 16
 
     def linear_sweep_cache(self, data, offset, insts, bin_instance, verbose=False):
-        section_offset_last = self.get_section_offset_last(bin_instance, offset)
+        section_offset_last = self.get_section_offset_last(bin_instance, data, offset)
         curr_offset = offset
         try:
             inst_va = self.get_va_from_offset(bin_instance, curr_offset)
@@ -394,7 +394,7 @@ class PEDisassembler(GenericDisassembler):
     def get_image_base_rva(self, pe):
         return pe.OPTIONAL_HEADER.ImageBase
 
-    def get_section_offset_last(self, pe, offset):
+    def get_section_offset_last(self, pe, data, offset):
         for section in pe.sections:
             section_begin = section.PointerToRawData
             section_last = section.PointerToRawData + section.SizeOfRawData - 1
@@ -483,7 +483,7 @@ class ELFDisassembler(GenericDisassembler):
     def get_image_base_rva(self, elf):
         return self.image_base_rva
 
-    def get_section_offset_last(self, elf, offset):
+    def get_section_offset_last(self, elf, data, offset):
         for s in range(self.n_segments):
             segment_begin = self.seg_offset_low[s]
             segment_last = self.seg_offset_high[s] - 1
@@ -654,6 +654,8 @@ class RawDisassembler(GenericDisassembler):
     def _dis_exported_funcs(self, bin_instance, insts, data, verbose, iat_api=dict()):
         return
 
+    def get_section_offset_last(self, pe, data, offset):
+        return len(data)-1
 
 def write_to_file(path, data):
     try:
